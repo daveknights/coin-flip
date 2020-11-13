@@ -1,5 +1,5 @@
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(480, window.innerWidth / window.innerHeight);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
 const renderer = new THREE.WebGLRenderer();
 const geometry = new THREE.CylinderGeometry(25, 25, 2, 40);
 
@@ -19,7 +19,7 @@ document.body.appendChild(renderer.domElement);
 
 scene.add(mesh);
 
-camera.position.set(0,0,50)
+camera.position.set(0,0,100)
 
 const animate = function () {
     requestAnimationFrame(animate);
